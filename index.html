@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Glow Beauty: maquillaje, skincare y accesorios para resaltar tu belleza.">
+  <title>Glow Beauty | Tu belleza, tu brillo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Glow Beauty, inicio">
+      <span class="brand-mark">✦</span>
+      <span>GLOW <b>BEAUTY</b><small>BEAUTY STORE</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="themeToggle" aria-label="Cambiar modo oscuro" title="Cambiar tema">☾</button>
+      <button class="cart-button" id="openCart" aria-label="Abrir carrito">🛍️ <span>Carrito</span> <b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">TU MOMENTO DE BRILLAR</p>
+        <h1>Tu belleza.<br><em>Tu propio</em> brillo.</h1>
+        <p class="hero-description">Encontrá tus favoritos de maquillaje y skincare. Pequeños detalles que hacen brillar tu esencia.</p>
+        <a class="primary-button" href="#productos">Explorar productos <span>→</span></a>
+        <div class="hero-note"><span>✧</span> Belleza para todos los días</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle"></div>
+        <img src="https://images.unsplash.com/photo- makeup-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85" alt="Productos de maquillaje sobre una mesa" onerror="this.src='https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85'">
+        <div class="floating-label"><strong>GLOW UP</strong><span>Sentite increíble</span></div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Beneficios">
+      <div><span>♡</span><p><b>Elegí tus favoritos</b><small>Productos seleccionados</small></p></div>
+      <div><span>✧</span><p><b>Tu rutina ideal</b><small>Maquillaje y cuidado</small></p></div>
+      <div><span>☼</span><p><b>Brillá a tu manera</b><small>Tu belleza, tus reglas</small></p></div>
+    </section>
+
+    <section class="products-section" id="productos">
+      <div class="section-heading">
+        <div><p class="eyebrow">NUESTRA SELECCIÓN</p><h2>Encontrá tu <em>favorito</em></h2></div>
+        <p class="section-intro">Descubrí productos para acompañar cada versión de vos.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">⌕ <input id="searchInput" type="search" placeholder="Buscar un producto..." aria-label="Buscar productos"></label>
+        <select id="categoryFilter" aria-label="Filtrar por categoría">
+          <option value="todos">Todas las categorías</option>
+          <option value="maquillaje">Maquillaje</option>
+          <option value="skincare">Skincare</option>
+          <option value="accesorios">Accesorios</option>
+        </select>
+        <select id="sortFilter" aria-label="Ordenar productos">
+          <option value="default">Ordenar por</option>
+          <option value="low">Menor precio</option>
+          <option value="high">Mayor precio</option>
+          <option value="name">Nombre A-Z</option>
+        </select>
+      </div>
+
+      <div class="category-chips" id="categoryChips">
+        <button class="chip active" data-category="todos">Todos</button>
+        <button class="chip" data-category="maquillaje">Maquillaje</button>
+        <button class="chip" data-category="skincare">Skincare</button>
+        <button class="chip" data-category="accesorios">Accesorios</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>No encontramos productos. Probá con otra búsqueda. ♡</p>
+    </section>
+
+    <section class="about-section" id="nosotros">
+      <div class="about-star">✦</div>
+      <div><p class="eyebrow">UN POQUITO SOBRE NOSOTROS</p><h2>La belleza está en <em>ser vos.</em></h2>
+      <p>En Glow Beauty creemos que el maquillaje y el cuidado personal son formas de expresión. Creamos este espacio para que encuentres productos que te inspiren a sentirte bien, todos los días.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">✦</span><span>GLOW <b>BEAUTY</b><small>BEAUTY STORE</small></span></a><p>Hecho con ♡ para que brilles a tu manera.</p><small>© 2026 Glow Beauty · Proyecto educativo</small></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-heading"><div><p class="eyebrow">TUS FAVORITOS</p><h2>Mi carrito</h2></div><button class="close-button" id="closeCart" aria-label="Cerrar carrito">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>♡</span><p>Tu carrito está esperando algo lindo.</p><button class="text-button" id="continueShopping">Seguir explorando</button></div>
+    <div class="cart-summary" id="cartSummary"><div class="total-line"><span>Total</span><strong id="cartTotal">$0</strong></div><button class="primary-button checkout-button" id="checkoutButton">Finalizar compra <span>→</span></button><small>Compra de demostración · No se realiza ningún pago</small></div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkoutModal" aria-hidden="true">
+    <div class="checkout-modal">
+      <button class="close-button modal-close" id="closeModal" aria-label="Cerrar">×</button>
+      <div class="success-icon">♡</div><p class="eyebrow">¡YA CASI!</p><h2>Simulá tu compra</h2>
+      <p>Completá tus datos para probar el proceso. No se realizará ningún pago real.</p>
+      <form id="checkoutForm">
+        <label>Nombre y apellido<input name="name" required minlength="3" placeholder="Tu nombre"></label>
+        <label>Correo electrónico<input name="email" type="email" required placeholder="nombre@correo.com"></label>
+        <button class="primary-button" type="submit">Confirmar pedido <span>→</span></button>
+      </form>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

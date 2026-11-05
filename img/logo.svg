@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120">
+<rect width="420" height="120" rx="18" fill="#fffaf8"/>
+<circle cx="58" cy="60" r="35" fill="none" stroke="#a65f73" stroke-width="2"/>
+<path d="M58 35 L64 53 L83 60 L64 67 L58 85 L52 67 L33 60 L52 53 Z" fill="#a65f73"/>
+<text x="112" y="57" font-family="Georgia,serif" font-size="35" fill="#633e4a" letter-spacing="3">GLOW</text>
+<text x="112" y="88" font-family="Arial,sans-serif" font-size="22" fill="#a65f73" letter-spacing="5">BEAUTY</text>
+</svg>
